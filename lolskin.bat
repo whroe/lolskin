@@ -1,0 +1,1 @@
+start cmd /k "cd C:\Users\Administrator\Desktop\lolSkinUpdate\lolskonUpdate\puppeteer-pdf&&node index.js"
