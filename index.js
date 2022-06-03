@@ -9,7 +9,7 @@ const {
         // args: ['--no-sandbox', '--disable-setuid-sandbox'],
         //  ignoreDefaultArgs: ['--disable-extensions'],
         executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
-        headless: false,
+        headless: true,
         defaultViewport: {
             width: 1920,
             height: 937
@@ -29,6 +29,7 @@ const {
         })
         return arr
     });
+    console.log();
     await getFile(hrefArr[0])
     await rar()
     await browser.close()
@@ -63,7 +64,7 @@ const {
     
     function rar() {
         var adm_zip = require('adm-zip');
-        var unzip = new adm_zip('C:/Users/Administrator/Desktop/lolSkinUpdate/lolskonUpdate/puppeteer-pdf/file/MODSKIN_12.10.1.zip');  
+        var unzip = new adm_zip('C:/Users/Administrator/Desktop/lolSkinUpdate/lolskonUpdate/puppeteer-pdf/file/'+ hrefArr[0].substr(hrefArr[0].lastIndexOf('/') + 1));  
         unzip.extractAllTo("C:/Users/Administrator/Desktop/lolskin/", /*overwrite*/true);
     }
 })()
